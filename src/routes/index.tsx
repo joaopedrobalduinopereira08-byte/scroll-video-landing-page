@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Rocket, Search, Video, EyeOff, DollarSign, Check, Lock, Zap, Users, ChevronDown, Flame } from "lucide-react";
-import offerImg from "@/assets/metodo_zn_oferta.png.asset.json";
 import tourVideo from "@/assets/metodo_zn_tour.mp4.asset.json";
 import { CHECKOUT_URL, PRICE } from "@/config/offer";
 
@@ -76,23 +75,23 @@ function Index() {
     <main className="overflow-x-hidden bg-background pb-24 text-foreground md:pb-0">
       {/* Hero */}
       <section className="relative px-4 pb-14 pt-10" style={{ background: "radial-gradient(ellipse at top, oklch(0.6 0.25 25 / 35%), transparent 60%)" }}>
-        <div className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
-          <div className="text-center md:text-left">
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="text-center">
             <p className="font-display text-lg uppercase tracking-widest text-primary">Método ZN · TikTok Shop</p>
-            <h1 className="mt-3 font-display text-4xl uppercase leading-[1.05] sm:text-5xl lg:text-6xl">
+            <h1 className="mt-3 font-display text-5xl uppercase leading-[1.05] sm:text-6xl lg:text-7xl">
               Aprenda a vender pelo <span className="neon-text text-primary">TikTok Shop</span>, mesmo começando do zero!
             </h1>
-            <p className="mt-5 text-lg text-muted-foreground">
+            <p className="mx-auto mt-5 max-w-2xl text-lg text-muted-foreground sm:text-xl">
               Aprenda a divulgar produtos, criar vídeos estratégicos e ganhar comissões como afiliado, <strong className="text-foreground">sem precisar ter estoque</strong>.
             </p>
-            <div className="mt-6 rounded-2xl border border-primary bg-card p-5 shadow-glow">
-              <p className="flex items-center justify-center gap-2 font-display uppercase text-highlight md:justify-start"><Flame className="h-5 w-5" /> Oferta especial</p>
-              <p className="mt-1 font-bold uppercase">Treinamento completo + acompanhamento no Grupo VIP</p>
-              <p className="mt-1 font-display text-2xl uppercase text-highlight">Por menos de R$ 100,00!</p>
+            <div className="mt-8 rounded-3xl border-2 border-primary bg-card p-6 shadow-glow sm:p-8">
+              <p className="flex items-center justify-center gap-2 font-display uppercase text-highlight"><Flame className="h-5 w-5" /> Oferta especial</p>
+              <p className="mt-2 text-lg font-bold uppercase">Treinamento completo + acompanhamento no Grupo VIP</p>
+              <p className="mt-2 font-display text-3xl uppercase text-highlight sm:text-4xl">Por menos de R$ 100,00!</p>
             </div>
-            <div className="mt-6 flex justify-center md:justify-start"><Cta>Quero entrar no Método ZN agora!</Cta></div>
+            <div className="mt-8 flex justify-center"><Cta>Quero entrar no Método ZN agora!</Cta></div>
+            <div className="mt-6"><Badges /></div>
           </div>
-          <img src={offerImg.url} alt="Método ZN TikTok Shop — oferta" className="w-full rounded-3xl border border-primary shadow-glow" />
         </div>
       </section>
 
