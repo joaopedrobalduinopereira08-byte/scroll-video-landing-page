@@ -142,3 +142,27 @@
     color: var(--color-foreground);
   }
 }
+
+:root {
+  --background: oklch(0.12 0.01 20);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.17 0.02 20);
+  --card-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.6 0.25 25);
+  --primary-foreground: oklch(0.99 0 0);
+  --muted-foreground: oklch(0.75 0.02 20);
+  --border: oklch(0.6 0.25 25 / 40%);
+  --highlight: oklch(0.9 0.18 95);
+  --glow: 0 0 24px oklch(0.6 0.25 25 / 70%), 0 0 60px oklch(0.6 0.25 25 / 35%);
+}
+@theme inline {
+  --color-highlight: var(--highlight);
+  --font-display: "Anton", sans-serif;
+  --font-sans: "Archivo", sans-serif;
+}
+body { font-family: var(--font-sans); }
+@utility shadow-glow { box-shadow: var(--glow); }
+@utility neon-text { text-shadow: 0 0 18px oklch(0.6 0.25 25 / 80%); }
+@keyframes pulse-glow { 0%,100% { transform: scale(1); } 50% { transform: scale(1.03); } }
+@utility animate-pulse-glow { animation: pulse-glow 2.2s ease-in-out infinite; }
+@utility reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; &.in { opacity: 1; transform: none; } }
