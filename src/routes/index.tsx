@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Rocket, Search, Video, EyeOff, DollarSign, Check, Lock, Zap, Users, ChevronDown, Flame } from "lucide-react";
-import offerImg from "@/assets/metodo_zn_oferta.png.asset.json";
 import tourVideo from "@/assets/metodo_zn_tour.mp4.asset.json";
 import { CHECKOUT_URL, PRICE } from "@/config/offer";
 
