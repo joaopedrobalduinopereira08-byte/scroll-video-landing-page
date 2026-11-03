@@ -1,3 +1,4 @@
+import tourVideo from "@/assets/metodo_zn_tour.mp4.asset.json";
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Rocket, Search, Video, EyeOff, DollarSign, Check, Lock, Zap, Users, ChevronDown, Flame } from "lucide-react";
@@ -117,7 +118,7 @@ function Index() {
             <h2 className="font-display text-3xl uppercase sm:text-4xl">Veja <span className="text-primary">por dentro</span></h2>
             <p className="mt-3 text-muted-foreground">Confira como é a área do Método ZN antes de entrar.</p>
           </div>
-          <video src="/metodo_zn_tour.mp4" className="reveal mx-auto max-h-[80vh] w-full max-w-sm rounded-3xl border border-primary shadow-glow" autoPlay muted loop playsInline controls preload="auto" aria-label="Vídeo de apresentação do Método ZN" />
+          <video src={tourVideo.url} className="reveal mx-auto max-h-[80vh] w-full max-w-sm rounded-3xl border border-primary shadow-glow" autoPlay muted loop playsInline controls preload="auto" aria-label="Vídeo de apresentação do Método ZN" />
         </div>
       </section>
 
